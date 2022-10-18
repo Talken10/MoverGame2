@@ -63,10 +63,10 @@ class Mover
    
    if (this.live)
    {
-    //colorMode(HSB, (width+height) , 100,100);
-    fill(0, hue, 0);
+    colorMode(HSB, (width+height) , 100,100);
+    fill(hue, 75, 75);
     noStroke();
-    circle(location.x, location.y,25);
+    circle(location.x, location.y,50);
    }
   
   
@@ -87,7 +87,10 @@ class Mover
       {
         this.live = false;
         living = living - 1; 
-        hue = hue - 10;
+     
+          hue = hue - 10;
+         
+   
       }
  
     }

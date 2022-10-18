@@ -63,10 +63,10 @@ class XBall
    
    if (this.exist)
    {
-    //colorMode(HSB, (width+height)/2, 100,100);
-    fill( 255,255,255 );
+    colorMode(HSB, (width+height), 100,100);
+    fill( hue2,75,75 );
     noStroke();
-    circle(location.x, location.y,25);
+    circle(location.x, location.y,50);
    }
 
   
@@ -85,8 +85,19 @@ void bite()
     {
     if(this.dist < 30 ) 
       {
-       this.exist = false;
-        existing = existing - 1; 
+       //this.exist = false;
+       // existing = existing - 1; 
+       
+       
+       if (hue < 430)
+       {
+       hue = hue + 30;
+       }
+       if (hue < 330)
+       {
+        hue = hue + 50;
+       }
+      
       }
     }
 }
